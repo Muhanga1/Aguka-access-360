@@ -1,0 +1,6 @@
+District,Youth_Unemployment_%,AGUKA_Funding_M_RWF,Poverty_Rate_%
+Kigali,25,120,15
+Muhanga,32,45,28
+Rubavu,28,80,22
+Huye,30,60,25
+Nyagatare,35,50,30

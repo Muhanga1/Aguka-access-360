@@ -1,0 +1,29 @@
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+
+st.set_page_config(page_title="AGUKA Access 360", layout="wide")
+st.title("AGUKA Access 360: Financial Inclusion Dashboard")
+st.subheader("NISR Hackathon 2026 - Track 2")
+
+st.write("**Author:** Hakizimana Emmanuel - Muhanga District")
+st.write("**Contact:** 0788582473")
+
+data = {
+    'District': ['Kigali', 'Muhanga', 'Rubavu', 'Huye', 'Nyagatare'],
+    'Youth_Unemployment_%': [25, 32, 28, 30, 35],
+    'AGUKA_Funding_M_RWF': [120, 45, 80, 60, 50],
+    'Poverty_Rate_%': [15, 28, 22, 25, 30]
+}
+df = pd.DataFrame(data)
+
+st.write("### Data ya NISR + AGUKA")
+st.dataframe(df)
+
+fig, ax = plt.subplots()
+ax.bar(df['District'], df['Youth_Unemployment_%'])
+plt.xticks(rotation=45)
+st.pyplot(fig)
+
+st.write("###  Recommendation")
+st.success("Districts like Nyagatare & Muhanga have high unemployment but low funding. AGUKA should prioritize them.")
